@@ -1,6 +1,9 @@
-# AngularCalculator
+# Angular Calculator with Keyboard Host Listener
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+
+# Output
+![calc](https://github.com/jomsquebral/angular-calculator/assets/13448557/95a1c68a-3bcb-46c0-a546-35e9ef6979b1)
 
 ## Development server
 

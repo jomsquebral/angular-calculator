@@ -1,0 +1,78 @@
+<div class="CalculatorContainer">
+    <div class="container p-5">
+        <div class="calculatorbox shadow pt-3 rounded-5">
+            <div><p class="text-center text-secondary header-text">Calculator by Joms</p></div>
+            <div class="answer-box text-light p-3">
+                <h1>{{displayValue}}</h1>
+            </div>
+            <div class="calculatorbuttons rounded-bottom-5">
+                <div class="row">
+                    <div class="col-6 nopadding">
+                        <button [class.clicked]="clickedButton === 'C'" class="btn btn-block btn-func" (click)="clear(); handleKeyInput('C')" type="button">C</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button class="btn btn-block btn-func" (click)="backspace()" type="button">
+                            <i class="bi bi-backspace"></i>
+                        </button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '/'" class="btn btn-block btn-func" (click)="changeValue('/')" type="button">/</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '7'" class="btn btn-block btn-num" (click)="changeValue('7')" type="button">7</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '8'" class="btn btn-block btn-num" (click)="changeValue('8')" type="button">8</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '9'" class="btn btn-block btn-num" (click)="changeValue('9')" type="button">9</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '*'" class="btn btn-block btn-func" (click)="changeValue('*')" type="button">x</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '4'" class="btn btn-block btn-num" (click)="changeValue('4')" type="button">4</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '5'"  class="btn btn-block btn-num" (click)="changeValue('5')" type="button">5</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '6'"  class="btn btn-block btn-num" (click)="changeValue('6')" type="button">6</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '-'" class="btn btn-block btn-func" (click)="changeValue('-')" type="button">-</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '1'" class="btn btn-block btn-num" (click)="changeValue('1')" type="button">1</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '2'" class="btn btn-block btn-num" (click)="changeValue('2')" type="button">2</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '3'" class="btn btn-block btn-num" (click)="changeValue('3')" type="button">3</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '+'" class="btn btn-block btn-func" (click)="changeValue('+')" type="button">+</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '.'" class="btn btn-block btn-func left-radius" (click)="changeValue('.'); handleKeyInput('.')"  type="button">.</button>
+                    </div>
+                    <div class="col-3 nopadding">
+                        <button [class.clicked]="clickedButton === '0'" class="btn btn-block btn-num" (click)="changeValue('0'); handleKeyInput('0')" type="button">0</button>
+                    </div>
+                    <div class="col-6 nopadding">
+                        <button [class.clicked]="clickedButton === '='" class="btn btn-block btn-func right-radius"  (click)="calculate(); handleKeyInput('=')" type="button">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
